@@ -4,7 +4,59 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>TL-01 : Carousel</title>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<script
+			src="https://kit.fontawesome.com/0d5dafc31b.js"
+			crossorigin="anonymous"
+		></script>
+		<title>TL-01 : Carrousel</title>
 	</head>
-	<body></body>
+	<body>
+		<header>
+			<h1>Carrousel de chiens</h1>
+		</header>
+		<main>
+			<section class="section-carrousel">
+				<figure class="visible">
+					<img src="assets/images/chien-1.jpg" alt="chien-1" />
+					<figcaption>Chien à la plage</figcaption>
+				</figure>
+				<figure>
+					<img src="assets/images/chien-2.jpg" alt="chien-2" />
+					<figcaption>Chien attentif</figcaption>
+				</figure>
+				<figure>
+					<img src="assets/images/chien-3.jpg" alt="chien-3" />
+					<figcaption>Les chiots contre attaque</figcaption>
+				</figure>
+				<figure>
+					<img src="assets/images/chien-4.jpg" alt="chien-4" />
+					<figcaption>Deux chiens et un hamac</figcaption>
+				</figure>
+				<figure>
+					<img src="assets/images/chien-5.jpg" alt="chien-5" />
+					<figcaption>Trouver l'intrus</figcaption>
+				</figure>
+				<button class="btn-precedent">
+					<i class="far fa-arrow-alt-circle-left"></i>
+				</button>
+				<button class="btn-suivant">
+					<i class="far fa-arrow-alt-circle-right"></i>
+				</button>
+				<!-- <button class="btn-play-pause">
+					<i class="fas fa-play"></i>
+				</button> -->
+				<div class="contenant-nombre">
+					<p class="nombre actif">1</p>
+					<p class="nombre">2</p>
+					<p class="nombre">3</p>
+					<p class="nombre">4</p>
+					<p class="nombre">5</p>
+				</div>
+			</section>
+		</main>
+		<footer>Élisabeth Desjardins 2021</footer>
+
+		<script src="scripts/script.js"></script>
+	</body>
 </html>

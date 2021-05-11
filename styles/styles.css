@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 700;
+	text-align: center;
+}
+
+section {
+	position: relative;
+	overflow: hidden;
+}
+
+figure {
+	background-color: black;
+	padding: 50px 25px;
+	display: none;
+}
+img {
+	width: 100%;
+}
+
+figcaption {
+	color: #f2f2f2;
+	text-align: center;
+	margin-top: 25px;
+}
+
+button > i {
+	color: #f2f2f2;
+	font-size: xx-large;
+}
+
+button > i:hover {
+	color: chocolate;
+}
+
+.btn-precedent,
+.btn-suivant,
+.btn-play-pause {
+	background: rgb(59, 59, 59);
+	border-radius: 100%;
+	position: absolute;
+	cursor: pointer;
+}
+
+.btn-precedent {
+	top: 50%;
+	left: 50px;
+}
+.btn-suivant {
+	top: 50%;
+	right: 50px;
+}
+
+.btn-play-pause {
+	top: 70%;
+	left: 45%;
+	padding: 25px;
+}
+
+.visible {
+	display: block;
+}
+
+.contenant-nombre {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.nombre {
+	background: black;
+	border: 5px solid chocolate;
+	border-radius: 50%;
+	color: #f2f2f2;
+	font-size: large;
+	font-weight: 700;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.nombre:hover,
+.actif {
+	color: chocolate;
+}
