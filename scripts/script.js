@@ -3,9 +3,10 @@ const boutonSuivant = document.querySelector('.btn-suivant');
 const figuresCarrousel = document.querySelectorAll('figure');
 const nombresCarrousel = document.querySelectorAll('.nombre');
 const bodyElement = document.querySelector('body');
-const boutonPlayPause = document.querySelector('.btn-play-pause');
+const boutonPlayPause = document.querySelector('.btn-play-pause'); 
 
 let positionDuCarrousel = 0;
+let creerInterval; 
 
 function retirerClass() {
 	figuresCarrousel[positionDuCarrousel].classList.remove('visible');
@@ -59,4 +60,14 @@ nombresCarrousel.forEach((element) => {
 	});
 });
 
-// window.setInterval(naviguerVersImageSuivante, 5000);
+boutonPlayPause.addEventListener('click', function() { 
+	
+	if(boutonPlayPause.innerHTML === 'Play') { 
+		boutonPlayPause.innerHTML = 'Pause'; 
+		creerInterval = window.setInterval(naviguerVersImageSuivante, 3000);
+	} else { 
+		window.clearInterval(); 
+		boutonPlayPause.innerHTML = 'Play'; 
+		window.clearInterval(creerInterval);
+	}
+}); 

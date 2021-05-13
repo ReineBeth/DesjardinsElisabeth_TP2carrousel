@@ -3,6 +3,7 @@
 body {
 	font-family: 'Raleway', sans-serif;
 	box-sizing: border-box;
+	max-width: 800px;
 }
 
 h1 {
@@ -55,12 +56,6 @@ button > i:hover {
 .btn-suivant {
 	top: 50%;
 	right: 50px;
-}
-
-.btn-play-pause {
-	top: 70%;
-	left: 45%;
-	padding: 25px;
 }
 
 .visible {
