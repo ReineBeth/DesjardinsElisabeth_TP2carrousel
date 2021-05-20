@@ -4,9 +4,10 @@ const figuresCarrousel = document.querySelectorAll('figure');
 const nombresCarrousel = document.querySelectorAll('.nombre');
 const bodyElement = document.querySelector('body');
 const boutonPlayPause = document.querySelector('.btn-play-pause'); 
+const imagesCarrousel = document.querySelectorAll('img'); 
 
 let positionDuCarrousel = 0;
-let creerInterval; 
+let creerInterval = window.setInterval(naviguerVersImageSuivante, 5000); 
 
 function retirerClass() {
 	figuresCarrousel[positionDuCarrousel].classList.remove('visible');
@@ -33,7 +34,7 @@ function naviguerVersImagePrecedente() {
 	retirerClass();
 
 	if (positionDuCarrousel === 0) {
-		positionDuCarrousel = 4;
+		positionDuCarrousel = figuresCarrousel.length - 1;
 	} else {
 		positionDuCarrousel--;
 	}
@@ -62,12 +63,11 @@ nombresCarrousel.forEach((element) => {
 
 boutonPlayPause.addEventListener('click', function() { 
 	
-	if(boutonPlayPause.innerHTML === 'Play') { 
+	if(boutonPlayPause.innerHTML === 'Jouer') { 
 		boutonPlayPause.innerHTML = 'Pause'; 
-		creerInterval = window.setInterval(naviguerVersImageSuivante, 3000);
+		creerInterval = window.setInterval(naviguerVersImageSuivante, 5000);
 	} else { 
-		window.clearInterval(); 
-		boutonPlayPause.innerHTML = 'Play'; 
+		boutonPlayPause.innerHTML = 'Jouer'; 
 		window.clearInterval(creerInterval);
 	}
 }); 

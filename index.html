@@ -7,16 +7,16 @@
 		<link rel="stylesheet" href="styles/styles.css" />
 		<script
 			src="https://kit.fontawesome.com/0d5dafc31b.js"
-			crossorigin="anonymous"
-		></script>
-		<title>TL-01 : Carrousel</title>
+			crossorigin="anonymous"></script>
+		<title>TP-02 : Carrousel</title>
 	</head>
 	<body>
 		<header>
-			<h1>Carrousel de chiens</h1>
+			<h1>TP-02 : Carrousel</h1>
 		</header>
 		<main>
 			<section class="section-carrousel">
+				<h2>Carrousel de chiens</h2>
 				<figure class="visible">
 					<img src="assets/images/chien-1.jpg" alt="chien-1" />
 					<figcaption>Suis-je une grand-maman ou un chien?</figcaption>
@@ -43,17 +43,25 @@
 				<button class="btn-suivant">
 					<i class="far fa-arrow-alt-circle-right"></i>
 				</button>
-				<button class="btn-play-pause">Play</button>
-				<div class="contenant-nombre">
-					<p class="nombre actif">1</p>
-					<p class="nombre">2</p>
-					<p class="nombre">3</p>
-					<p class="nombre">4</p>
-					<p class="nombre">5</p>
-				</div>
+
+				<ul class="contenant-nombre">
+					<li class="liste-bouton"><button class="nombre actif">1</button></li>
+					<li class="liste-bouton"><button class="nombre">2</button></li>
+					<li class="liste-bouton"><button class="nombre">3</button></li>
+					<li class="liste-bouton"><button class="nombre">4</button></li>
+					<li class="liste-bouton"><button class="nombre">5</button></li>
+				</ul>
+				<button class="btn-play-pause">Pause</button> 
+
 			</section>
 		</main>
-		<footer>Élisabeth Desjardins 2021</footer>
+		<footer>
+			<ul class="contenant-footer">
+				<li class="liste-footer">TP2: Production de composantes interactives d'interface</li>
+				<li class="liste-footer">Élisabeth Desjardins</li>
+				<li class="liste-footer">2021</li>
+			</ul>
+		</footer>
 
 		<script src="scripts/script.js"></script>
 	</body>
