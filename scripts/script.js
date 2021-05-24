@@ -7,7 +7,8 @@ const boutonPlayPause = document.querySelector('.btn-play-pause');
 const imagesCarrousel = document.querySelectorAll('img'); 
 
 let positionDuCarrousel = 0;
-let creerInterval = window.setInterval(naviguerVersImageSuivante, 5000); 
+let creerInterval = window.setInterval(naviguerVersImageSuivante, 3000);
+
 
 function retirerClass() {
 	figuresCarrousel[positionDuCarrousel].classList.remove('visible');
@@ -21,7 +22,7 @@ function ajouterClass() {
 
 function naviguerVersImageSuivante() {
 	retirerClass();
-
+	mettreAZeroIntervalle(); 
 	if (positionDuCarrousel === figuresCarrousel.length - 1) {
 		positionDuCarrousel = 0;
 	} else {
@@ -32,6 +33,7 @@ function naviguerVersImageSuivante() {
 
 function naviguerVersImagePrecedente() {
 	retirerClass();
+	mettreAZeroIntervalle(); 
 
 	if (positionDuCarrousel === 0) {
 		positionDuCarrousel = figuresCarrousel.length - 1;
@@ -39,6 +41,23 @@ function naviguerVersImagePrecedente() {
 		positionDuCarrousel--;
 	}
 	ajouterClass();
+}
+
+function intervallePausePlay() { 
+	if(boutonPlayPause.innerHTML === 'Jouer') { 
+		boutonPlayPause.innerHTML = 'Pause'; 
+		creerInterval = window.setInterval(naviguerVersImageSuivante, 3000);
+	} else { 
+		boutonPlayPause.innerHTML = 'Jouer'; 
+		window.clearInterval(creerInterval);
+	}
+}
+
+function mettreAZeroIntervalle() { 
+	window.clearInterval(creerInterval); 
+	if(boutonPlayPause.innerHTML === 'Pause') {
+		creerInterval = window.setInterval(naviguerVersImageSuivante, 3000);
+	} 
 }
 
 boutonSuivant.addEventListener('click', naviguerVersImageSuivante);
@@ -61,13 +80,4 @@ nombresCarrousel.forEach((element) => {
 	});
 });
 
-boutonPlayPause.addEventListener('click', function() { 
-	
-	if(boutonPlayPause.innerHTML === 'Jouer') { 
-		boutonPlayPause.innerHTML = 'Pause'; 
-		creerInterval = window.setInterval(naviguerVersImageSuivante, 5000);
-	} else { 
-		boutonPlayPause.innerHTML = 'Jouer'; 
-		window.clearInterval(creerInterval);
-	}
-}); 
+boutonPlayPause.addEventListener('click', intervallePausePlay); 
