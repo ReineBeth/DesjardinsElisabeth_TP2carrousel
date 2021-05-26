@@ -77,6 +77,7 @@ nombresCarrousel.forEach((element) => {
 		retirerClass();
 		positionDuCarrousel = element.innerHTML - 1;
 		ajouterClass();
+		mettreAZeroIntervalle(); 
 	});
 });
 
