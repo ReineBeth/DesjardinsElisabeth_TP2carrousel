@@ -1,3 +1,4 @@
+// Initialisation des variables
 const boutonPrecedent = document.querySelector('.btn-precedent');
 const boutonSuivant = document.querySelector('.btn-suivant');
 const figuresCarrousel = document.querySelectorAll('figure');
@@ -9,6 +10,7 @@ const imagesCarrousel = document.querySelectorAll('img');
 let positionDuCarrousel = 0;
 let creerInterval = window.setInterval(naviguerVersImageSuivante, 3000);
 
+// Fonctions 
 
 function retirerClass() {
 	figuresCarrousel[positionDuCarrousel].classList.remove('visible');
@@ -59,6 +61,8 @@ function mettreAZeroIntervalle() {
 		creerInterval = window.setInterval(naviguerVersImageSuivante, 3000);
 	} 
 }
+
+// Événements 
 
 boutonSuivant.addEventListener('click', naviguerVersImageSuivante);
 
