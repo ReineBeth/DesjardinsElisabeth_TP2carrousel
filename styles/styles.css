@@ -45,7 +45,6 @@ figure {
 img {
 	animation: effet-images-in 1s infinite;
 	animation-iteration-count: 1;
-	
 	width: 100%;
 	
 }

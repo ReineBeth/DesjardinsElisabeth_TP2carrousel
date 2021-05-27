@@ -46,22 +46,22 @@ function naviguerVersImagePrecedente() {
 	ajouterClass();
 }
 
-function intervallePausePlay() { 
-	if(boutonPlayPause.innerHTML === 'Jouer') { 
-		boutonPlayPause.innerHTML = 'Pause'; 
-		creerInterval = window.setInterval(naviguerVersImageSuivante, 3000);
-	} else { 
-		boutonPlayPause.innerHTML = 'Jouer'; 
-		window.clearInterval(creerInterval);
-	}
-}
-
 function mettreAZeroIntervalle() { 
 	window.clearInterval(creerInterval); 
 	if(boutonPlayPause.innerHTML === 'Pause') {
 		creerInterval = window.setInterval(naviguerVersImageSuivante, 3000);
 	} 
 }
+
+function intervallePausePlay() { 
+	if(boutonPlayPause.innerHTML === 'Jouer') { 
+		boutonPlayPause.innerHTML = 'Pause'; 
+	} else { 
+		boutonPlayPause.innerHTML = 'Jouer'; 
+	}
+	mettreAZeroIntervalle(); 
+}
+
 
 // Événements 
 
