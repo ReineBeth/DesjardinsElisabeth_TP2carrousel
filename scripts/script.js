@@ -1,3 +1,4 @@
+// Je dois changer quelque chose pour pouvoir pousser
 // Initialisation des variables
 const boutonPrecedent = document.querySelector('.btn-precedent');
 const boutonSuivant = document.querySelector('.btn-suivant');
