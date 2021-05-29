@@ -121,7 +121,7 @@ footer {
 	width: 100%;
 }
 
-.nombre {
+.btn-nombre {
 	background: #1E3859;
 	border-radius: 50%;
 	border: 2px solid #f2f2f2; 
@@ -132,7 +132,7 @@ footer {
 	width: 35px;
 }
 
-.nombre:hover,
+.btn-nombre:hover,
 .actif {
 	border: 5px solid #D5D973; 
 	color: #D5D973;
@@ -199,7 +199,7 @@ footer {
 		transform: translateX(-50%);
 	}
 
-	.nombre {
+	.btn-nombre {
 		font-size: 1.5em;
 		font-weight: 700;
 		height: 45px; 
