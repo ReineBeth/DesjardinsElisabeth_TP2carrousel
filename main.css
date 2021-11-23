@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root { 
+	--principale: #241623; 
+	--secondaire: #3c787e ; 
+	--accent: #a71d31; 
+	--liens: #ea6045;
+	--blanc: #fdfffc; 
+	--gris: #31353d;
+	--noir: #02010a; 
+}
+
+body { 
+	background: var(--principale);
+	font-family: 'Karla', sans-serif; 
+	font-size: 62.5%;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.todo {
+	background: var(--blanc);
+	border: 0.5em solid var(--secondaire);
+	border-radius: 1em;
+	padding: 1.5em;
+	max-width: 80%;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.5em;
+
+}
+
+.todo .todo_h1 {
+	color: var(--accent);
+	text-align: center;
+}
+
+.todo .todo_ul {
+	font-size: 1.3em;
+	list-style-type: none;
+	text-align: left;
+	padding: 0;
+}
+
+.todo .todo_ul_li {
+	cursor: pointer;
+}
+
+.todo .todo_ul_li:focus {
+	outline: 1px solid var(--principale)
+}
+
+.todo .todo_ul_li:before {
+	content:"\2B9E";
+}
+
+.todo .todo_done {
+	color: var(--gris);
+	text-decoration: line-through;
+}
+
+.todo .todo_btn {
+	background: none; 
+	color: var(--blanc);
+	font-size: 1.2em;
+	outline: none;	
+	border: none;
+}
+
+.todo .todo_btn:hover {
+	color: var(--noir);
+	background: var(--blanc);
+}
+
+.todo .btn_effacer {
+	background: var(--accent);
+	border-radius: 0.2em;
+	align-self: center;
+	margin: 0.5em;
+	padding : 0.5em;
+	width: 50%;
+}
+
+.todo .btn_effacer:hover{
+	outline: 0.2em solid var(--accent);
+}
+
+.todo .btn_effacer:focus{
+	background-color: rgba(167, 29, 49, 0.2);
+	outline: 2px solid var(--accent);
+	color: var(--accent);
+}
+
+.todo .todo_form {
+	display: flex;
+	font-size: 2em;
+}
+
+.todo .todo_input {
+	width: 100%;
+	outline: none;
+}
+
+.todo .todo_input:focus {
+	outline: 2px solid var(--secondaire);
+}
+
+.todo .btn_ajouter {
+	background: var(--secondaire);
+	border-radius: 0 0.2em 0.2em 0;
+}
+
+.todo .btn_ajouter:hover{
+	outline: 0.1em solid var(--secondaire);
+}
+
+.todo .btn_ajouter:focus{
+	background-color: rgba(60, 120, 126, 0.2);
+	outline: 2px solid var(--secondaire);
+	color: var(--secondaire);
+}

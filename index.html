@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/styles/main.css">
+	<title>Mon premier projet Vue</title>
+</head>
+<body>
+
+	<main class="todo" id="app_todo">
+		
+		<h1 class="todo_h1">Plan pour gouverner la terre</h1>
+		<ul class="todo_ul">
+			<li class="todo_ul_li todo_done">
+				Maitriser le HTML
+			</li>
+			<li class="todo_ul_li">
+				Hacker la NASA avec HTML
+			</li>
+			<li class="todo_ul_li">
+				Chanter dans la douche
+			</li>
+		</ul>
+		
+		<button class="todo_btn btn_effacer" type="button">
+			Effacer la liste
+		</button>
+		<form class="todo_form">
+
+			<input class="todo_input" type="text" id="name" name="name" placeholder="Ajouter une tâche ici" aria-label="Ajouter une tache">
+			
+			<button class="todo_btn btn_ajouter" type="button" aria-label="Envoyer la tache ajouter">
+				+
+			</button>
+		</form>
+	</main>
+	
+	<script src="https://unpkg.com/vue@next"></script>
+	<script src="./assets/scripts/main.js"></script>
+</body>
+</html>
